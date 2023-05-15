@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Email_Document</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Email Document Link</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript(&quot;/soap/ajax/20.0/connection.js&quot;)} 
+{!requireScript(&quot;/soap/ajax/20.0/apex.js&quot;)} 
+var publicAccess = &apos;{!TVA_CFB__Cloud_Files__c.TVA_CFB__Cloud_Public_Access_URL__c}&apos;; 
+if(publicAccess == &apos;&apos;) 
+alert(&quot;{!$Label.tva_cfb__file_is_not_public}&quot;); 
+else{
+
+
+var fileURL = &apos;./_ui/core/email/author/EmailAuthor?p7=Document%0AFile Name : &apos;+&apos;{!URLENCODE( TVA_CFB__Cloud_Files__c.Name )}&apos;+&apos;%20%28%20&apos;+&apos;{!TVA_CFB__Cloud_Files__c.TVA_CFB__File_Size__c}&apos;+&apos;%20%29%0A&apos;+&apos;Link : &apos;;
+
+if (&apos;{! TVA_CFB__Cloud_Files__c.TVA_CFB__Public_Short_URL__c}&apos; != &apos;&apos;)
+fileURL += &apos;{! TVA_CFB__Cloud_Files__c.TVA_CFB__Public_Short_URL__c }&apos;+&apos;%0A&apos;; 
+
+if (&apos;{! TVA_CFB__Cloud_Files__c.TVA_CFB__Public_Short_URL__c}&apos; == &apos;&apos;)
+fileURL += &apos;{!URLENCODE(TVA_CFB__Cloud_Files__c.TVA_CFB__Cloud_Public_Access_URL__c)}&apos;+&apos;%0A&apos;; 
+
+if(&apos;{!TVA_CFB__Cloud_Files__c.TVA_CFB__Password__c }&apos; != &apos;&apos;) 
+fileURL += &apos;%20Password%3A%20&apos;+&apos;{!TVA_CFB__Cloud_Files__c.TVA_CFB__Password__c }&apos; +&apos;%0A&apos;; 
+
+fileURL += &apos;&amp;retURL=%2F&apos;+&apos;{!TVA_CFB__Cloud_Files__c.Id}&apos;;
+
+if (&apos;{!LEFT(TVA_CFB__Cloud_Files__c.TVA_CFB__Parent_ID__c, 3)}&apos; == &apos;00Q&apos;) {} else {
+fileURL += &apos;&amp;p3_lkid=&apos;+&apos;{!TVA_CFB__Cloud_Files__c.TVA_CFB__Parent_ID__c}&apos;;  
+}
+
+window.location.href= fileURL ; 
+}</url>
+</WebLink>

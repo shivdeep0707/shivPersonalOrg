@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Utility_Tool_Files</fullName>
+    <columns>NAME</columns>
+    <columns>TVA_CFB__File_Type__c</columns>
+    <columns>TVA_CFB__File_Size__c</columns>
+    <columns>TVA_CFB__View_File__c</columns>
+    <columns>TVA_CFB__Download_File__c</columns>
+    <columns>TVA_CFB__E_Tag__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TVA_CFB__Attachment_ID__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LAST_UPDATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Utility Tool Files</label>
+    <language>en_US</language>
+</ListView>

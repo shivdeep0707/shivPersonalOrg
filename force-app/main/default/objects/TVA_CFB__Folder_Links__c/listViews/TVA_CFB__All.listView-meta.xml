@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__All</fullName>
+    <columns>TVA_CFB__Folder_Name__c</columns>
+    <columns>TVA_CFB__Folder_Share__c</columns>
+    <columns>NAME</columns>
+    <columns>TVA_CFB__Parent_ID__c</columns>
+    <columns>TVA_CFB__Password__c</columns>
+    <columns>TVA_CFB__Url__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

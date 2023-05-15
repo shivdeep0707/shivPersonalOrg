@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Restore</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Restore</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/TVA_CFB__RestoreFileVersion?id={!TVA_CFB__Version_History__c.Id}</url>
+</WebLink>

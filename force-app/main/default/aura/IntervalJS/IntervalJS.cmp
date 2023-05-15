@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="RefreshContactCounter" access="global" >
+	
+    <aura:attribute name="recordId" type="Id"></aura:attribute>
+    <aura:attribute name="pollId" type="String"></aura:attribute>
+
+    <lightning:button variant="brand" label="Subscribe" title="Subscribe" onclick="{!c.init}" />
+    <lightning:button variant="brand-outline" label="Stop" title="Stop" onclick="{!c.cancelSubscribe}" />
+      
+</aura:component>

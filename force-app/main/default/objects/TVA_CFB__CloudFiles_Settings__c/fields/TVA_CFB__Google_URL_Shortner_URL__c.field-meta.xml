@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Google_URL_Shortner_URL__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Google URL Shortner URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

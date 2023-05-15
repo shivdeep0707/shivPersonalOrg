@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Upload_New_Version</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Upload New Version</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/26.0/connection.js&apos;)} 
+{!requireScript(&quot;/soap/ajax/20.0/apex.js&quot;)} 
+{!REQUIRESCRIPT(&apos;/js/functions.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/TVA_CFB__jQuery/jquery-1.8.2.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/TVA_CFB__jQuery/ui/jquery-ui-1.9.1.custom.min.js&apos;)} 
+requireCssFile(&apos;/resource/TVA_CFB__Lightning_Zip_Docuvault/assets/styles/salesforce-lightning-design-system-modified.css&apos;); 
+
+var fileref1 = document.createElement(&apos;link&apos;); 
+fileref1.setAttribute(&apos;id&apos;, &apos;slds-css-extra&apos;); 
+fileref1.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;); 
+fileref1.setAttribute(&apos;type&apos;, &apos;text/css&apos;); 
+fileref1.setAttribute(&apos;href&apos;, &apos;/resource/popupModalCSS&apos;); 
+document.head.appendChild(fileref1);  
+var iframe_url = &apos;{!URLFOR(&quot;/apex/TVA_CFB__VersionFileUpload?id=&quot;+TVA_CFB__Cloud_Files__c.Id )}&apos;;
+
+function requireCssFile(filename) { 
+var fileref = document.createElement(&apos;link&apos;); 
+fileref.setAttribute(&apos;id&apos;, &apos;slds-css&apos;); 
+fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;); 
+fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;); 
+fileref.setAttribute(&apos;href&apos;, filename); 
+document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref); 
+document.getElementsByTagName(&apos;head&apos;)[0].styleclass; 
+} 
+
+var containerDiv = document.createElement(&apos;div&apos;); 
+containerDiv.setAttribute(&apos;id&apos;,&apos;modal&apos;); 
+
+var modal = &apos;&apos;; 
+modal += &apos;&lt;div id=&quot;popupPanel&quot; role=&quot;dialog&quot; class=&quot;slds-modal slds-fade-in-open&quot;&gt;&apos;; 
+modal += &apos;&lt;div class=&quot;slds-modal__container&quot; style=&quot;width: 40%;&quot;&gt;&apos;; 
+modal += &apos;&lt;div class=&quot;slds-modal__header slds-theme--alert-texture slds-notify slds-notify--alert&quot;&gt;&apos;; 
+modal += &apos;&lt;h2 id=&quot;modalLabel&quot; class=&quot;slds-text-heading--medium&quot;&gt;{!$Label.tva_cfb__upload_new_version}&lt;/h2&gt;&apos;; 
+modal += &apos;&lt;/div&gt;&apos;; 
+modal += &apos;&lt;div class=&quot;slds-modal__content slds-p-around--medium slds-scrollable&quot;&gt;&apos;; 
+modal += &apos;&lt;div style=&quot;height: 310px; width:100%; overflow:hidden;&quot;&gt;&apos;; 
+modal += &apos;&lt;iframe src=&quot;&apos;+iframe_url+&apos;&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;/&gt;&apos;; 
+modal += &apos;&lt;/div&gt;&lt;/div&gt;&apos;; 
+modal += &apos;&lt;/div&gt;&lt;/div&gt;&apos;; 
+
+var backdrop = &apos;&lt;div id=&quot;backdropPanel&quot; class=&quot;slds-backdrop slds-backdrop--open&quot;&gt;&lt;/div&gt;&apos;; 
+
+containerDiv.innerHTML = modal; 
+containerDiv.innerHTML += backdrop; 
+
+   document.body.appendChild(containerDiv);</url>
+</WebLink>

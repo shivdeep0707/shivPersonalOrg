@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Arquivos da nuvem</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Arquivos da nuvem</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome do arquivo</nameFieldLabel>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>TVA_CFB__Docuvault_Validation_Deprecated</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Box_Preview</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Download</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Email_Document</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Google_URL_Analytics</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Make_Public_URL</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Preview</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Publish_File_To_Chatter</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Upload_As_Salesforce_File</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__Upload_New_Version</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>TVA_CFB__View_File</name>
+    </webLinks>
+</CustomObjectTranslation>

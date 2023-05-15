@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Large_Files</fullName>
+    <columns>NAME</columns>
+    <columns>TVA_CFB__File_Size__c</columns>
+    <columns>TVA_CFB__File_Type__c</columns>
+    <columns>TVA_CFB__Bucket_Name__c</columns>
+    <columns>TVA_CFB__Parent_ID__c</columns>
+    <columns>TVA_CFB__Owner_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>TVA_CFB__View_File__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TVA_CFB__E_Tag__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>TVA_CFB__Reponse_Code__c</field>
+        <operation>equals</operation>
+        <value>204</value>
+    </filters>
+    <filters>
+        <field>TVA_CFB__File_Size_in_Bytes__c</field>
+        <operation>greaterThan</operation>
+        <value>10000000</value>
+    </filters>
+    <label>Large Files</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__File_Type_Image__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>iF( or(Lower(TVA_CFB__File_Type__c) == &apos;jpg&apos;,Lower(TVA_CFB__File_Type__c) == &apos;jpeg&apos;,Lower(TVA_CFB__File_Type__c) == &apos;png&apos;,Lower(TVA_CFB__File_Type__c) == &apos;bmp&apos;,Lower(TVA_CFB__File_Type__c) == &apos;gif&apos;), IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/bmp.png&quot;,&quot;&quot;), 
+(iF( or(Lower(TVA_CFB__File_Type__c) == &apos;doc&apos;,Lower(TVA_CFB__File_Type__c) == &apos;docx&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/doc.png&quot;,&quot;&quot;), 
+(iF(Lower(TVA_CFB__File_Type__c) == &apos;pdf&apos;,IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/pdf.png&quot;,&quot;&quot;), 
+(iF( or(Lower(TVA_CFB__File_Type__c) == &apos;mp4&apos;,Lower(TVA_CFB__File_Type__c) == &apos;3g2&apos;,Lower(TVA_CFB__File_Type__c) == &apos;3pg&apos;,Lower(TVA_CFB__File_Type__c) == &apos;avi&apos;,Lower(TVA_CFB__File_Type__c) == &apos;flv&apos;,Lower(TVA_CFB__File_Type__c) == &apos;mpeg&apos;,Lower(TVA_CFB__File_Type__c) == &apos;mp4a&apos;,Lower(TVA_CFB__File_Type__c) == &apos;m4v&apos;,Lower(TVA_CFB__File_Type__c) == &apos;wmv&apos;) , 
+IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/video.png&quot;,&quot;&quot;), 
+(iF(or(Lower(TVA_CFB__File_Type__c) == &apos;csv&apos;,Lower(TVA_CFB__File_Type__c) == &apos;xls&apos;,Lower(TVA_CFB__File_Type__c) == &apos;xlsx&apos;,Lower(TVA_CFB__File_Type__c) == &apos;xlsb&apos;,Lower(TVA_CFB__File_Type__c) == &apos;xlsm&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/xlsx.png&quot;,&quot;&quot;), 
+(iF(or(Lower(TVA_CFB__File_Type__c) == &apos;txt&apos;,Lower(TVA_CFB__File_Type__c) == &apos;xml&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/txt.png&quot;,&quot;&quot;), 
+(iF(or(Lower(TVA_CFB__File_Type__c) == &apos;rar&apos;,Lower(TVA_CFB__File_Type__c) == &apos;zip&apos;,Lower(TVA_CFB__File_Type__c) == &apos;dir&apos;,Lower(TVA_CFB__File_Type__c) == &apos;webarchive&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/rar.png&quot;,&quot;&quot;), 
+(iF(or(Lower(TVA_CFB__File_Type__c) == &apos;mp3&apos;,Lower(TVA_CFB__File_Type__c) == &apos;m3u&apos;,Lower(TVA_CFB__File_Type__c) == &apos;wav&apos;,Lower(TVA_CFB__File_Type__c) == &apos;wma&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/mp3.png&quot;,&quot;&quot;), 
+(iF( or(Lower(TVA_CFB__File_Type__c) == &apos;ppt&apos;,Lower(TVA_CFB__File_Type__c) == &apos;pptx&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/pptx.png&quot;,&quot;&quot;), 
+(iF( or(Lower(TVA_CFB__File_Type__c) == &apos;pst&apos;,Lower(TVA_CFB__File_Type__c) == &apos;ost&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/ost.png&quot;,&quot;&quot;), 
+(iF( Lower(TVA_CFB__File_Type__c) == &apos;one&apos;,IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/one.png&quot;,&quot;&quot;), 
+(iF( Lower(TVA_CFB__File_Type__c) == &apos;vsx&apos;,IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/vst.png&quot;,&quot;&quot;), 
+(iF( or(Lower(TVA_CFB__File_Type__c) == &apos;pst&apos;,Lower(TVA_CFB__File_Type__c) == &apos;ost&apos;),IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/ost.png&quot;,&quot;&quot;), 
+IMAGE(&quot;/resource/TVA_CFB__FileTypeIcons/unknown.png&quot;,&quot;&quot;) 
+
+)))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>File Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

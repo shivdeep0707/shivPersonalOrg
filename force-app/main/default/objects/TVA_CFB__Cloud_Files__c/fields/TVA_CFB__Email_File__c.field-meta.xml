@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TVA_CFB__Email_File__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>if(TVA_CFB__Public_Short_URL__c == &quot;&quot;,$Label.tva_cfb__file_is_not_public, 
+HYPERLINK(&quot;/_ui/core/email/author/EmailAuthor?p7=Document%0AFile Name : &quot; 
++Name+&quot;%0AFile Size : &quot;+TVA_CFB__File_Size__c+&quot;%0AFile Type : &quot;+TVA_CFB__File_Type__c+&quot;%0ADownload Link : &quot;+TVA_CFB__Public_Short_URL__c+&quot;&amp;retURL=%2F&quot;+ TVA_CFB__Parent_ID__c ,$Label.tva_cfb__email_file_link, &quot;_parent&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Email File Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
